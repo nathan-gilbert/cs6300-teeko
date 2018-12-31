@@ -32,7 +32,7 @@ extern int plaus;
 extern int alth;
 extern int trace;
 extern int stats;
-extern int forward;
+extern bool forward_prune;
 extern int fvalue;
 extern int dvalue;
 extern int noplayer;

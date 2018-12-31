@@ -435,14 +435,14 @@ void preamble(void) {
   if (ab && plaus)
     cout << "Alpha-Beta pruning with plausible move ordering." << endl;
 
-  if (ab && (!plaus || !forward))
+  if (ab && (!plaus || !forward_prune))
     cout << "Alpha-Beta pruning with no plausible move ordering." << endl;
 
-  if (ab && forward) {
+  if (ab && forward_prune) {
     cout << "Alpha-Beta pruning with no plausible move ordering and forward "
             "pruning."
          << endl;
-    cout << "Forwad Pruning: " << fvalue << endl;
+    cout << "Forward Pruning: " << fvalue << endl;
   }
 
   if (nocomp)

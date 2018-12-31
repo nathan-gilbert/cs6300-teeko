@@ -228,12 +228,12 @@ int maxvalue(Node n, int depth) {
   }
 
   // If plausible, order the moves accordingly.
-  if (plaus || forward) {
+  if (plaus || forward_prune) {
     plausible(children);
   }
 
   // Only follow the top <fvalue> children if forward pruning is enabled.
-  for (int i = 0; i < (forward ? fvalue : (int)children.size()); i++) {
+  for (int i = 0; i < (forward_prune ? fvalue : (int)children.size()); i++) {
     tmp = minvalue(children[i], depth + 1);
 
     if (tmp > v) {
@@ -299,11 +299,11 @@ int maxvalue_ab(Node n, int depth, int alpha, int beta) {
   }
 
   // If plausible
-  if (plaus || forward) {
+  if (plaus || forward_prune) {
     plausible(children);
   }
 
-  for (int i = 0; i < (forward ? fvalue : (int)children.size()); i++) {
+  for (int i = 0; i < (forward_prune ? fvalue : (int)children.size()); i++) {
     tmp = minvalue_ab(children[i], depth + 1, alpha, beta);
 
     if (tmp > v) {
@@ -376,11 +376,11 @@ int minvalue(Node n, int depth) {
   }
 
   // If plausible
-  if (plaus || forward) {
+  if (plaus || forward_prune) {
     plausible(children);
   }
 
-  if (forward) {
+  if (forward_prune) {
     vector<Node>::iterator iter;
     int i = 0;
 
@@ -460,11 +460,11 @@ int minvalue_ab(Node n, int depth, int alpha, int beta) {
   }
 
   // If plausible
-  if (plaus || forward) {
+  if (plaus || forward_prune) {
     plausible(children);
   }
 
-  if (forward) {
+  if (forward_prune) {
     vector<Node>::iterator iter;
     int i = 0;
 

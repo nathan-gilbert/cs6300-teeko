@@ -1,7 +1,5 @@
 /*
- * Nathan Gilbert
  * TeekoMaster 5000
- * CS 6300 - Assignment 2
  */
 #include "input_check.h"
 #include "util.h"
@@ -42,7 +40,7 @@ int dvalue = 4;
 int alth = false;
 
 /* Use forward pruning. */
-int forward = false;
+bool forward_prune = false;
 
 /* Forward pruning value. */
 int fvalue = DEFAULT_VALUE;
@@ -154,7 +152,7 @@ int main(int argc, char *argv[]) {
   }
 
   if (fvalue != DEFAULT_VALUE)
-    forward = true;
+    forward_prune = true;
 
   if (arg > 0) {
     inFile = args[argpt++];
