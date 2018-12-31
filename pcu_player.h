@@ -3,7 +3,7 @@
 
 #include "util.h"
 
-//int alphabeta(Node, int, int, int);
-//void plausible(vector<Node> &);
+// int alphabeta(Node, int, int, int);
+// void plausible(vector<Node> &);
 
 #endif

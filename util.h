@@ -1,15 +1,15 @@
 #ifndef _UTIL_H
 #define _UTIL_H
 
+#include "node.h"
+#include <algorithm>
+#include <ctime>
+#include <fstream>
 #include <iostream>
 #include <limits>
-#include <string>
-#include <fstream>
 #include <stdlib.h>
+#include <string>
 #include <vector>
-#include <ctime>
-#include <algorithm>
-#include "node.h"
 
 using namespace std;
 
@@ -19,7 +19,7 @@ using namespace std;
 const int N_POS_WINS = 44;
 
 /* In the final version, simply move all globals here. */
-extern char	teeko_board[BOARD_SIZE][BOARD_SIZE];
+extern char teeko_board[BOARD_SIZE][BOARD_SIZE];
 extern int machine_plays_black;
 extern bool black_to_move;
 extern int piece_count_red;
@@ -67,7 +67,7 @@ void alpha_beta(Node, vector<int> &, bool);
 int maxvalue(Node, int);
 int minvalue(Node, int);
 
-/* Max and Min functions for alpha-beta search. */ 
+/* Max and Min functions for alpha-beta search. */
 int maxvalue_ab(Node, int, int, int);
 int minvalue_ab(Node, int, int, int);
 
