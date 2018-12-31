@@ -1,7 +1,4 @@
-# CS 6300 - Artificial Intelligence Assignment 2
-## March 15, 2007
-
-## Preliminaries
+# Teeko
 
 ## To compile
 
